@@ -11,10 +11,22 @@ struct ReadingContentView: View {
     let content: ReadingContent
     
     var body: some View {
-        VStack {
-            Text(content.title)
-            Text(content.description)
+        ScrollView {
+            VStack(alignment: .leading) {
+                AsyncImage(url: content.imageUrl) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(3/2, contentMode: .fit)
+                        
+                } placeholder: {
+                    ProgressView()
+                }
+                Text(content.title)
+                Text(content.description)
+                Spacer()
+            }
         }
+        .ignoresSafeArea(edges: .top)
     }
 }
 
