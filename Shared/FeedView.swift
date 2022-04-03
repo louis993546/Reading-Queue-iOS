@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct FeedView: View {
-    @State private var showingOptions = false
-    
     let title: String
     let imageUrl: URL
     let feeds: [URL]
@@ -28,40 +26,30 @@ struct FeedView: View {
     var body: some View {
         List {
             ForEach(0..<feeds.count) { index in
-                CardView(url: feeds[index])
-                    .listRowSeparator(.hidden)
+                // Hack to hide the chevron: https://stackoverflow.com/a/59832389/2384934
+                ZStack {
+                    CardView(url: feeds[index])
+                    NavigationLink(destination: ReadingContentView(content: feeds[index].asReadingContent())) {
+                        EmptyView()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                }
+                .listRowSeparator(.hidden)
             }
         }
         .listStyle(PlainListStyle())
         .navigationTitle(title)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                Image(systemName: "plus")
-                    .foregroundColor(.blue)
-                    .onTapGesture {
-                        showingOptions = true
-                    }
-                    .confirmationDialog(
-                        "What do you want to add",
-                        isPresented: $showingOptions
-                    ) {
-                        Button("RSS Feed") {
-                            
-                        }
-                        Button("Newsletter (Coming soon)") {
-                            // TODO
-                        }
-                        Button("Link from Clipboard") {
-                            
-                        }
-                    }
-            }
-        }
     }
 }
 
 struct InboxView_Previews: PreviewProvider {
     static var previews: some View {
         FeedView("Feed")
+    }
+}
+
+extension URL {
+    func asReadingContent() -> ReadingContent {
+        return ReadingContent(id: "something", title: "title", description: "description", imageUrl: self)
     }
 }

@@ -27,7 +27,7 @@ struct CardView: View {
     }
 }
 
-struct Content {
+struct ReadingContent {
     var id: String
     var title: String
     var description: String

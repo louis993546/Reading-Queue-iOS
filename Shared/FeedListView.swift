@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedListView: View {
     @State private var selectedView: Int? = 1
+    @State private var showingOptions = false
     
     var body: some View {
         NavigationView {
@@ -19,6 +20,30 @@ struct FeedListView: View {
                     selection: self.$selectedView
                 ) {
                     Text("Navigation Link \(item)")
+                }
+            }
+            .navigationTitle("Feeds")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Image(systemName: "plus")
+                        .foregroundColor(.blue)
+                        .onTapGesture {
+                            showingOptions = true
+                        }
+                        .confirmationDialog(
+                            "What do you want to add",
+                            isPresented: $showingOptions
+                        ) {
+                            Button("RSS Feed") {
+                                
+                            }
+                            Button("Newsletter (Coming soon)") {
+                                // TODO
+                            }
+                            Button("Link from Clipboard") {
+                                
+                            }
+                        }
                 }
             }
         }

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF20192027FA29B10019D032 /* ReadingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20191F27FA29B10019D032 /* ReadingContentView.swift */; };
+		BF20192127FA29B10019D032 /* ReadingContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF20191F27FA29B10019D032 /* ReadingContentView.swift */; };
 		BFEE940227F7A45200DA07C1 /* Reading_QueueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE93F227F7A44F00DA07C1 /* Reading_QueueApp.swift */; };
 		BFEE940327F7A45200DA07C1 /* Reading_QueueApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE93F227F7A44F00DA07C1 /* Reading_QueueApp.swift */; };
 		BFEE940427F7A45200DA07C1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFEE93F327F7A44F00DA07C1 /* ContentView.swift */; };
@@ -57,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BF20191F27FA29B10019D032 /* ReadingContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingContentView.swift; sourceTree = "<group>"; };
 		BFEE93F227F7A44F00DA07C1 /* Reading_QueueApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reading_QueueApp.swift; sourceTree = "<group>"; };
 		BFEE93F327F7A44F00DA07C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BFEE93F427F7A45100DA07C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 				BFEE942F27F7B66300DA07C1 /* CardView.swift */,
 				BFEE943227F7B69100DA07C1 /* TextOnlyView.swift */,
 				BFF43A0927F9F0D7008CA44F /* FeedListView.swift */,
+				BF20191F27FA29B10019D032 /* ReadingContentView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -294,6 +298,7 @@
 				BFEE942D27F7ABD700DA07C1 /* FavoriteView.swift in Sources */,
 				BFEE940227F7A45200DA07C1 /* Reading_QueueApp.swift in Sources */,
 				BFEE943327F7B69100DA07C1 /* TextOnlyView.swift in Sources */,
+				BF20192027FA29B10019D032 /* ReadingContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +315,7 @@
 				BFEE942E27F7ABD700DA07C1 /* FavoriteView.swift in Sources */,
 				BFEE940327F7A45200DA07C1 /* Reading_QueueApp.swift in Sources */,
 				BFEE943427F7B69100DA07C1 /* TextOnlyView.swift in Sources */,
+				BF20192127FA29B10019D032 /* ReadingContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
